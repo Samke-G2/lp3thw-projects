@@ -2,8 +2,8 @@
 
 from sys import argv
 
-script, user_name = argv
-prompt = '> '
+script, user_name , location= argv
+prompt = '-> '
 
 print(f"Hi {user_name}, I'm the {script} script")
 print("I'd like to ask you a few questions.")
@@ -18,6 +18,6 @@ computer = input(prompt)
 
 print(f"""
 Alright, so you said {likes} about liking me.
-You live in {lives}. Not sure where that is.
+You live in {lives} and your current location is {location}.
 And you have a {computer} computer. Nice.
 """)
