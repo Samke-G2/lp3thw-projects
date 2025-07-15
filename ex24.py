@@ -4,3 +4,8 @@ author: samke_g2
 
 This is a practice exercise to recap all the other exercises done until this point and practice the important stuff.
 """
+
+
+print("Let's practice everything.")
+print('You\'d need to know \'bout escape with \\ that do:')
+print("\n newlines and \t tabs.")
