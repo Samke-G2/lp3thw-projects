@@ -47,4 +47,4 @@ print("We can also do that this way:")
 formula = secret_formula(start_point)
 
 # this is an easy way to apply a list to format string
-print("We'd have {} beans, {} jars, and {} crates.".format(*formula))
+print("We'd have {} beans, {} jars, and {} crates.".format(*formula)) 
