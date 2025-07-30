@@ -4,6 +4,10 @@ author: Samke_g2 via Zed Shaw
 
 Exercise 25 of the "Learn python the hard way" book, its basically practice on
 strings and lists.
+
+Now, we need to learn how to import into powershell 7 and work it out, or maybe revert to the other powersehell.
+Maybe find out how to create own module and access functions from it. Thats what ex25 is really about.
+
 """
 def break_words(stuff):
     """This function will break up words for us."""
