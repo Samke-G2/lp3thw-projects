@@ -10,7 +10,7 @@ print("How old are you?", end=' ')
 age = input()
 print("How tall are you (in m)?", end=' ')
 height = input()
-print("How much do you weigh (in kg)?", end=' '
+print("How much do you weigh (in kg)?", end=' ')
 weight = input()
 
 print(f"So, you're {age} years old, {height}m tall and weigh {weight}kg.")
@@ -68,7 +68,7 @@ print(f"We'd have {beans} beans, {jars} jars, and {crates} crates.")
 start_point = start_point / 10
 
 print("We can also do that this way:")
-formula = secret_formula(startpoint)
+formula = secret_formula(start_point)
 # this is an easy way to apply a list to a format string
 print("We'd have {} beans, {} jars, and {} crates.".format(*formula))
 
