@@ -41,3 +41,5 @@ not ("testing" == "testing" and "Sam" == "Cool Guy")                    # True
 "chunky" == "bacon" and (not (3 == 4 or 3 == 3))                        # False
 
 3 == 3 and (not ("testing" == "testing" or "Python" == "Fun"))          # False
+
+# All my attempts count as correct. Done with this now.
