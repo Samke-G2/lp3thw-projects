@@ -17,7 +17,46 @@ print("Do you remember the person's name? (yes/no)")
 name = input("> ").lower()
 
 if name == "yes":
-    pass
+    print("\nIs it an ex? (yes/no)")
+    ex = input("> ").lower()
+
+    if ex == "yes":
+        print("\nAre you drunk? (yes/no)")
+        drunk = input("> ").lower()
+
+        if drunk == "no":
+            print("\nAre you in a convertible with Michael B. Jordan and/or Rihanna? (yes/no)")
+            convertible = input("> ").lower()
+
+            if convertible == "yes":
+                print("\n Say hi. \n")
+
+            elif convertible == "no":
+                print("\n Don't say hi. \n")
+            else:
+                pass
+
+        elif drunk == "yes":
+            print("\nDo you want to rekindle? (yes/no)")
+            rekindle = input("> ").lower()
+
+            if rekindle == "yes":
+                print("\n Say hi. \n")
+
+            elif rekindle == "no":
+                print("\n Don't say hi. \n")
+
+            else:
+                pass
+        else:
+            pass
+
+
+    elif ex == "no":        # Next pass starts here
+        pass        # HERE, actually.
+
+    else:
+        pass
 
 elif name == "no":
     print("\nIs there time to flee? (yes/no)")
@@ -48,14 +87,10 @@ elif name == "no":
 
             else:
                 pass
-
         else:
             pass
-
-
     else:
         pass
-
 
 else:
     print(f"{name} is not a valid input")
