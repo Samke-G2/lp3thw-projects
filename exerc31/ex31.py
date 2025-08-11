@@ -24,7 +24,8 @@ if door == "1":
     elif bear == "2":
         print("The bear eats your legs off. Good job!")
     else:
-        print(f"Well, doing {bear} is probably better.")
+        print(f"Well, doing {bear} is probably
+        better.")
         print("The bear runs away.")
 
 elif door == "2":
