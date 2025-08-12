@@ -126,8 +126,8 @@ elif name == "no":
 
             elif sunglasses == "no":
                 print("""
-                Address the person using an amusing nickname
-                such as "Bro", "Bafo", or "Chommie".
+ Address the person using an amusing nickname
+ such as "Bro", "Bafo", or "Chommie".
                 """)
 
             else:
