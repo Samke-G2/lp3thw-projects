@@ -52,9 +52,54 @@ if name == "yes":
             pass
 
 
-    elif ex == "no":        # Next pass starts here
-        pass        # HERE, actually.
+    elif ex == "no":
+        print("\nA friend's ex? (yes/no)")
+        frex = input("> ").lower()
 
+        if frex == "yes":
+            print("\n Don't say hi. \n")
+
+        elif frex == "no":
+            print("\nAn enemy or frenemy? (yes/no)")
+            enmity = input("> ").lower()
+
+            if enmity == "yes":
+                print("\nAre you in a convertible with Michael B. Jordan and/or Rihanna? (yes/no)")
+                convertible = input("> ").lower()
+
+                if convertible == "yes":
+                    print("\n Say hi. \n")
+
+                elif convertible == "no":
+                    print("\n Don't say hi. \n")
+
+                else:
+                    pass
+
+            elif enmity == "no":
+                print("\nAre you robbing a bank? (yes/no)")
+                robbery = input("> ").lower()
+
+                if robbery == "yes":
+                    print("\n Don't say hi. \n")
+
+                elif robbery == "no":
+                    print("\nAre you in a bathrobe? (yes/no)")
+                    bathrobe = input("> ").lower()
+
+                    if bathrobe == "yes":
+                        print("\n Don't say hi. \n")
+
+                    elif bathrobe == "no":
+                        print("\n Say hi. \n")
+                    else:
+                        pass
+                else:
+                    pass
+            else:
+                pass
+        else:
+            pass
     else:
         pass
 
