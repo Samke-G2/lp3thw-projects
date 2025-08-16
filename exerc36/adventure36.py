@@ -9,7 +9,7 @@ from sys import argv, exit
 
 script, name = argv
 
-key = True
+key = False
 
 def chest_room(key):
     print(f"""
@@ -32,8 +32,7 @@ def chest_room(key):
         print(f"\n    Good job, {name}, YOU LOSE!\n")
     elif ("open" in choice) and (key == False):
         print("    The chest is locked and you cannot open it without a key.")
-        print("    You try to open it until you're exhausted, then you starve to death.")
-        print(f"\n    Good job, {name}!\n")
+        dead("You try to open it until you're exhausted, then you starve to death.")
     elif ("open" in choice) and (key == True):
         print("    You use the key to open the chest.")
         print("    Inside you find the most valuable diamond in the world.")
@@ -55,8 +54,9 @@ def fire_room():
 
 def dead(reason):
     print(reason)
-    print(f"Good job, {name}!")
-    print("YOU LOSE!\n")
+    print(f"""    Good job, {name}!")
+    "YOU LOSE!\n
+    """)
 
 def death_room(key):
     print(f"""
@@ -82,23 +82,27 @@ def death_room(key):
     elif "right" in choice:
         fire_room()
     else:
-        dead("Death gets annoyed at your indecision and takes your soul.")
+        dead("    Death gets annoyed at your indecision and takes your soul.")
 
 
 def python_room(key):
-    print("In this room there is a giant python in the process of strangling a man to death.")
-    print("There is also an open door to your right.")
-    print("The man notices you and croakes, \"I need your help, stranger. If you kill this snake for me, I can lead you to some hidden treasure.\" ")
-    print("What do you do?")
+    print("""
+    In this room there is a giant python in the process of strangling a man to death.
+    There is also an open door to your right.
+    The man notices you and croakes, \"I need your help, stranger. If you kill this snake for me, I can lead you to some hidden treasure.\"
+    \n    What do you do?
+    """)
 
     choice = input("> ").lower()
 
     if ("help" in choice) or ("kill" in choice) or ("save" in choice) or ("cut" in choice) or ("stab" in choice) or ("snake" in choice) :
-        dead("You miss your attack on the snake and it kills you.")
+        dead("""
+    You miss your attack on the snake and it kills you.
+        """)
     elif "door" in choice:
         chest_room(key)
     else:
-        dead("The python kills the man and slithers over to do the same to you.")
+        dead("    The python kills the man and slithers over to do the same to you.")
 
 
 def spider_room(key):
@@ -115,43 +119,43 @@ def spider_room(key):
     choice = input("> ").lower()
 
     if ("spider" in choice) or ("kill" in choice) or ("cut" in choice) or ("stab" in choice) :
-        print("You manage to kill the spider before it notices you. After it has died, you retrieve the key on its leg")
+        print("    You manage to kill the spider before it notices you. After it has died, you retrieve the key on its leg")
 
         key = True
 
-        print("\nNow what do you do?")
+        print("\n    Now what do you do?")
         next = input("> ").lower()
 
         if ("back" in next) or ("return" in next):
             print("""
-            You return to the first room, faced with the same choices:
-            the door with the snake handle,
-            the door with the cobwebs,
-            and the one with the skull and crossbones.
+    You return to the first room, faced with the same choices:
+    the door with the snake handle,
+    the door with the cobwebs,
+    and the one with the skull and crossbones.
 
-            Which do you choose now?
+    Which do you choose now?
             """)
 
             sec_choice = input("> ").lower()
 
-            if ("snake" in choice):
+            if ("snake" in sec_choice):
                 python_room(key)
-            elif ("cobwebs" in choice):
+            elif ("cobwebs" in sec_choice):
                 spider_room(key)
-            elif ("skull" in choice):
+            elif ("skull" in sec_choice):
                 death_room(key)
             else:
-                dead("You're paralysed by indecision until you die of starvation")
+                dead("    You're paralysed by indecision until you die of starvation")
 
         elif "left" in next:
-            fire_room(key)
+            fire_room()
         else:
-            dead("You fall on your knife and die.")
+            dead("    You fall on your knife and die.")
 
     elif ("left" in choice):
-        fire_room(key)
+        fire_room()
     else:
-        dead("The spider notices you and attacks, paralysing and killing you.")
+        dead("    The spider notices you and attacks, paralysing and killing you.")
 
 def start(key):
     print("""
@@ -159,6 +163,7 @@ def start(key):
     In your travels, you find an underground temple looking for lost wonders.
 
     After going down a long shaft, you end up in a blank room lit with torches all around.
+    You are armed with a jungle knife, and a torch.
 
     There are three doors in the room:
     the one on your left has a handle that looks like the head of a snake,
@@ -177,7 +182,7 @@ def start(key):
     elif ("straight" in choice):
         death_room(key)
     else:
-        dead("You're paralysed by indecision until you die of starvation")
+        dead("    You're paralysed by indecision until you die of starvation")
 
 
-# (key)
+start(key)
