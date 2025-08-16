@@ -88,21 +88,39 @@ def death_room(key):
 def python_room(key):
     print("In this room there is a giant python in the process of strangling a man to death.")
     print("There is also an open door to your right.")
-    print("The man notices you and croakes, \"I need your help, stranger. If you help me, I can lead you to some hidden treasure.\" ")
+    print("The man notices you and croakes, \"I need your help, stranger. If you kill this snake for me, I can lead you to some hidden treasure.\" ")
+    print("What do you do?")
 
-    if:
-        pass
-    elif:
-        pass
+    choice = input("> ").lower()
+
+    if ("help" in choice) or ("kill" in choice) or ("save" in choice) or ("cut" in choice) or ("stab" in choice) or ("snake" in choice) :
+        dead("You miss your attack on the snake and it kills you.")
+    elif "door" in choice:
+        chest_room(key)
     else:
         dead("The python kills the man and slithers over to do the same to you.")
 
 
 def spider_room(key):
-    print("pass")
+    print("""
+    You enter a room with a  giant spider in it.
+    You notice a golden key on a ring around one of its spider's legs.
+    The spider is preoccupied at the moment while you look around.
 
-    if:
-        pass
+    To your left is an open doorway, there is a bright light eminating from the room beyond.
+
+    What do you do?
+    """)
+
+    choice = input("> ").lower()
+
+    if ("spider" in choice) or ("kill" in choice) or ("cut" in choice) or ("stab" in choice) :
+        print("You manage to kill the spider before it notices you. After it has died, you retrieve the key on its leg")
+
+        key = True
+
+        
+
     elif:
         pass
     else:
