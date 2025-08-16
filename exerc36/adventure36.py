@@ -40,18 +40,20 @@ def chest_room(key):
         print("    After retrieving it, you enter through the open door and escape to the outside world.")
         print("    You are alive, free, and unimaginably rich.")
         print(f"\n    Good job, {name}, YOU WIN!\n")
-    else:       # Need to create a death function to handle the else in this and other rooms
-        print("    You trip, fall, and hit your head on the chest.")
-        print("    You die almost immediately.")
-        print(f"\n    Good job, {name}!\n")
+    else:
+        dead("""
+        You trip, fall, and hit your head on the chest.
+        You die almost immediately.
+        """)
 
 
 def fire_room():
-    print("You enter a room with an angry fire demon in it.")
-    print("The demon spots you and burns you to a crisp.")
-    # Death function here
+    dead("""
+    You enter a room with an angry fire demon in it.
+    The demon spots you and burns you to a crisp.
+    """)
 
-def death(reason):
+def dead(reason):
     print(reason)
     print(f"Good job, {name}!")
     print("YOU LOSE!\n")
@@ -59,7 +61,7 @@ def death(reason):
 def death_room(key):
     print(f"""
     You enter a torch-lit room.
-    There are two  on either side of you.
+    There are two doors on either side of you.
     The door to your left is pitch black, with a bone handle.
     The door to your right is golden, with a diamond-encrusted handle.
     In front of you is a throne and on the throne sits a cloaked figure.
@@ -68,7 +70,19 @@ def death_room(key):
     \"Hello, {name}.\", says the hooded man, \"I have been expecting you.\"
     \"I am Death, and I offfer you a choice.\"
     \"One of these doors leads to your escape, and the other to your demise.\"
+    \"The choice is yours...\"
+
+    What do you do??
     """)
 
+    choice = input("> ").lower()
 
-# chest_room(key)
+    if "left" in choice:
+        chest_room(key)
+    elif "right" in choice:
+        fire_room()
+    else:
+        dead("Death gets annoyed at your indecision and takes your soul.")
+
+
+death_room(key)
