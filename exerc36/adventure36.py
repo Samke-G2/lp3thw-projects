@@ -85,4 +85,40 @@ def death_room(key):
         dead("Death gets annoyed at your indecision and takes your soul.")
 
 
+def python_room(key):
+    print("In this room there is a giant python in the process of strangling a man to death.")
+    print("There is also an open door to your right.")
+    print("The man notices you and croakes, \"I need your help, stranger. If you help me, I can lead you to some hidden treasure.\" ")
+
+    if:
+        pass
+    elif:
+        pass
+    else:
+        dead("The python kills the man and slithers over to do the same to you.")
+
+
+def spider_room(key):
+    print("pass")
+
+    if:
+        pass
+    elif:
+        pass
+    else:
+        dead("The spider notices you and attacks, paralysing and killing you.")
+
+def start(key):
+    print("pass")
+
+    if:
+        pass
+    elif:
+        pass
+    elif:
+        pass
+    else:
+        dead("Youre paralysed by indecision until you die of starvation")
+
+
 death_room(key)
