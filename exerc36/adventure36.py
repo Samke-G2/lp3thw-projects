@@ -119,10 +119,18 @@ def spider_room(key):
 
         key = True
 
-        
+        print("\nNow what do you do?")
+        next = input("> ").lower()
 
-    elif:
-        pass
+        if ("back" in next) or ("return" in next):
+            start(key)
+        elif "left" in next:
+            fire_room(key)
+        else:
+            dead("You fall on your knife and die.")
+
+    elif ("left" in choice):
+        fire_room(key)
     else:
         dead("The spider notices you and attacks, paralysing and killing you.")
 
@@ -139,4 +147,4 @@ def start(key):
         dead("Youre paralysed by indecision until you die of starvation")
 
 
-death_room(key)
+# (key)
