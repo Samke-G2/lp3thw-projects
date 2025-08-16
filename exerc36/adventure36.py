@@ -56,5 +56,19 @@ def death(reason):
     print(f"Good job, {name}!")
     print("YOU LOSE!\n")
 
+def death_room(key):
+    print(f"""
+    You enter a torch-lit room.
+    There are two  on either side of you.
+    The door to your left is pitch black, with a bone handle.
+    The door to your right is golden, with a diamond-encrusted handle.
+    In front of you is a throne and on the throne sits a cloaked figure.
+    """)
+    print(f"""
+    \"Hello, {name}.\", says the hooded man, \"I have been expecting you.\"
+    \"I am Death, and I offfer you a choice.\"
+    \"One of these doors leads to your escape, and the other to your demise.\"
+    """)
+
 
 # chest_room(key)
