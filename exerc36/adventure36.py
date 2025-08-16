@@ -123,7 +123,26 @@ def spider_room(key):
         next = input("> ").lower()
 
         if ("back" in next) or ("return" in next):
-            start(key)
+            print("""
+            You return to the first room, faced with the same choices:
+            the door with the snake handle,
+            the door with the cobwebs,
+            and the one with the skull and crossbones.
+
+            Which do you choose now?
+            """)
+
+            sec_choice = input("> ").lower()
+
+            if ("snake" in choice):
+                python_room(key)
+            elif ("cobwebs" in choice):
+                spider_room(key)
+            elif ("skull" in choice):
+                death_room(key)
+            else:
+                dead("You're paralysed by indecision until you die of starvation")
+
         elif "left" in next:
             fire_room(key)
         else:
@@ -135,16 +154,30 @@ def spider_room(key):
         dead("The spider notices you and attacks, paralysing and killing you.")
 
 def start(key):
-    print("pass")
+    print("""
+    You are a treasure hunter.
+    In your travels, you find an underground temple looking for lost wonders.
 
-    if:
-        pass
-    elif:
-        pass
-    elif:
-        pass
+    After going down a long shaft, you end up in a blank room lit with torches all around.
+
+    There are three doors in the room:
+    the one on your left has a handle that looks like the head of a snake,
+    the one on your right has cobwebs on teh corners of it,
+    the one straight ahead has a skull and crossbones engraved on it.
+
+    Which one do you go through?
+    """)
+
+    choice = input("> ").lower()
+
+    if ("left" in choice):
+        python_room(key)
+    elif ("right" in choice):
+        spider_room(key)
+    elif ("straight" in choice):
+        death_room(key)
     else:
-        dead("Youre paralysed by indecision until you die of starvation")
+        dead("You're paralysed by indecision until you die of starvation")
 
 
 # (key)
