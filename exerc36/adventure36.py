@@ -68,7 +68,7 @@ def death_room(key):
     """)
     print(f"""
     \"Hello, {name}.\", says the hooded man, \"I have been expecting you.\"
-    \"I am Death, and I offfer you a choice.\"
+    \"I am Death, and I offer you a choice.\"
     \"One of these doors leads to your escape, and the other to your demise.\"
     \"The choice is yours...\"
 
@@ -111,7 +111,7 @@ def spider_room(key):
     You notice a golden key on a ring around one of its spider's legs.
     The spider is preoccupied at the moment while you look around.
 
-    To your left is an open doorway, there is a bright light eminating from the room beyond.
+    To your left is a doorway, there is a bright light eminating from the room beyond.
 
     What do you do?
     """)
@@ -152,7 +152,7 @@ def spider_room(key):
         else:
             dead("    You fall on your knife and die.")
 
-    elif ("left" in choice):
+    elif ("left" in choice) or ("doorway" in choice):
         fire_room()
     else:
         dead("    The spider notices you and attacks, paralysing and killing you.")
@@ -167,7 +167,7 @@ def start(key):
 
     There are three doors in the room:
     the one on your left has a handle that looks like the head of a snake,
-    the one on your right has cobwebs on teh corners of it,
+    the one on your right has cobwebs on the corners of it,
     the one straight ahead has a skull and crossbones engraved on it.
 
     Which one do you go through?
