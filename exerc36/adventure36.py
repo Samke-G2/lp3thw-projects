@@ -16,34 +16,45 @@ def chest_room(key):
     You enter a room with a chest in the centre of it.
     The chest is locked and fixed to the floor.
     On the other side of the chest there is a door, opened a little bit.
-    What do yu do?
+    What do you do?
     """)
 
     choice = input("> ")
 
     if ("door" in choice) and (key == True):
-        print("You look at the key in your hands, wondering what it does, before entering the door.")
-        print("Through the door, you escape to the outside world.")
-        print("You are alive and free, but without any treasure.")
-        print(f"\nGood job, {name}!, YOU LOSE\n")
+        print("    You look at the key in your hands, wondering what it does, before entering the door.")
+        print("    Through the door, you escape to the outside world.")
+        print("    You are alive and free, but without any treasure.")
+        print(f"\n    Good job, {name}, YOU LOSE!\n")
     elif ("door" in choice) and (key == False):
-        print("Through the door, you escape to the outside world.")
-        print("You are alive and free, but without any treasure.")
-        print(f"\nGood job, {name}, YOU LOSE!\n")
+        print("    Through the door, you escape to the outside world.")
+        print("    You are alive and free, but without any treasure.")
+        print(f"\n    Good job, {name}, YOU LOSE!\n")
     elif ("open" in choice) and (key == False):
-        print("The chest is locked and you cannot open it without a key.")
-        print("You try to open it until you're exhausted, then you starve to death.")
-        print(f"\nGood job, {name}!\n")
+        print("    The chest is locked and you cannot open it without a key.")
+        print("    You try to open it until you're exhausted, then you starve to death.")
+        print(f"\n    Good job, {name}!\n")
     elif ("open" in choice) and (key == True):
-        print("You use the key to open the chest.")
-        print("Inside you find the most valuable diamond in tte world.")
-        print("After retrieving it, you enter throught the open door and escape to the outside world.")
-        print("You are alive, free, and unimaginably rich.")
-        print(f"\nGood job, {name}, YOU WIN!\n")
-    else:
-        print("You trip, fall, and hit your head on hte chest.")
-        print("You die almost immediately.")
-        print(f"\nGood job, {name}!\n")
+        print("    You use the key to open the chest.")
+        print("    Inside you find the most valuable diamond in the world.")
+        print("    After retrieving it, you enter through the open door and escape to the outside world.")
+        print("    You are alive, free, and unimaginably rich.")
+        print(f"\n    Good job, {name}, YOU WIN!\n")
+    else:       # Need to create a death function to handle the else in this and other rooms
+        print("    You trip, fall, and hit your head on the chest.")
+        print("    You die almost immediately.")
+        print(f"\n    Good job, {name}!\n")
 
 
-chest_room(key)
+def fire_room():
+    print("You enter a room with an angry fire demon in it.")
+    print("The demon spots you and burns you to a crisp.")
+    # Death function here
+
+def death(reason):
+    print(reason)
+    print(f"Good job, {name}!")
+    print("YOU LOSE!\n")
+
+
+# chest_room(key)
