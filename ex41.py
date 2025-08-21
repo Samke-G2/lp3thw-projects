@@ -8,7 +8,7 @@ to download a list of words.
 """
 import random
 from urllib.request import urlopen
-import says
+import sys
 
 WORD_URL = "https://learncodethehardway.org/words.txt"
 WORDS = []
@@ -70,21 +70,21 @@ def convert(snippet, phrase):
     return results
 
 
-# keep going until they hit CTRL-D
+# keep going until they hit CTRL-C
 try:
     while True:
-        snippets = list(PHRASES.keys())
+        snippets = list(PHRASES)
         random.shuffle(snippets)
 
         for snippet in snippets:
             phrase = PHRASES[snippet]
             question, answer = convert(snippet, phrase)
             if PHRASE_FIRST:
-                question, answer = answer, # QUESTION:
+                question, answer = answer, question
 
             print(question)
 
             input(" >")
             print(f"ANSWER:     {answer}\n\n")
-except EOfError:
+except EOFError:
     print("\nBye")
