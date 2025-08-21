@@ -21,18 +21,18 @@ provinces = {
 
 # Create a basic set of states and some cities in them
 cities = {
-    "GP": ["Joburg", "Pretoria", "Midrand", "Springs", "Vereeniging", "Krugersdorp" ]
-    "LP": ["Polokwane", "Tohoyandou"]
-    "MP": ["Nelspruit/Mbombela", "Balfour", "Standerton"]
+    "GP": ["Joburg", "Pretoria", "Midrand", "Springs", "Vereeniging", "Krugersdorp",],
+    "LP": ["Polokwane", "Tohoyandou",],
+    "MP": ["Nelspruit/Mbombela", "Balfour", "Standerton",],
 }
 
 # Add some more cities
-cities["KZN"] = ["Durban", "Ladysmith", "Newcastle"]
-cities["NC"] = ["Kimberly"]
-cities["EC"] = ["Matatiele", "Port Elizabeth"]
-cities["NW"] = ["Suncity", "Hartebeespoort", "Potchefstroom"]
-cities["FS"] = ["Bloemfontein"]
-cities["WC"] = ["Cape Town"]
+cities["KZN"] = ["Durban", "Ladysmith", "Newcastle",]
+cities["NC"] = ["Kimberly",]
+cities["EC"] = ["Matatiele", "Port Elizabeth",]
+cities["NW"] = ["Suncity", "Hartebeespoort", "Potchefstroom",]
+cities["FS"] = ["Bloemfontein",]
+cities["WC"] = ["Cape Town",]
 
 # Print out some cities
 print('-' * 10)
